@@ -24,10 +24,7 @@ function Navbar({ theme, toggleTheme }: any) {
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
-            <img 
-              src="https://i.ibb.co/gb5BGLXn/Site-logo-for-menu-and-footer.png" 
-              alt="Subhasish Adhikary" 
-              className="h-8 w-auto"
+            <img theme === 'light' ? '/logo-light.png' : 'https://i.ibb.co/13gDzfW/logo-light-mode.png'} alt="Subhasish Adhikary" className="h-8 w-auto"
             />
           </Link>
           <div className="hidden md:flex items-center gap-1">
