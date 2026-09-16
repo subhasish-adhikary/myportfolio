@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { HomePage } from './pages/HomePage';
@@ -15,7 +15,7 @@ import { useTheme } from './hooks/useTheme';
 export default function App() {
   const { theme, toggleTheme } = useTheme();
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Layout theme={theme} toggleTheme={toggleTheme}>
         <SEO />
         <Routes>
@@ -37,6 +37,6 @@ export default function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
